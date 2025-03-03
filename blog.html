@@ -41,10 +41,10 @@
             <p class="font-medium text-2xl text-[#00303C]">Question-1: What are the different ways to select an element in the DOM?</p>
         </div>
         <div class="rounded-2xl p-6 bg-white mb-4">
-            <p class="font-light text-2xl text-[#00303C]">getElementById(): Selects a single element by its unique ID.
-                getElementsByClassName(): Selects all elements with a specific class name.
-                getElementsByTagName(): Selects all elements with a specific HTML tag name.
-                querySelector(): Selects the first element that matches a specified CSS selector.
+            <p class="font-light text-2xl text-[#00303C]">getElementById(): Selects a single element by its unique ID. <br>
+                getElementsByClassName(): Selects all elements with a specific class name.<br>
+                getElementsByTagName(): Selects all elements with a specific HTML tag name.<br>
+                querySelector(): Selects the first element that matches a specified CSS selector.<br>
                 querySelectorAll(): Selects all elements that match a specified CSS selector.</p>
         </div>
         <!-- Q-2 -->
@@ -54,56 +54,56 @@
         <div class="rounded-2xl p-6 bg-white mb-4">
             <p class="font-light text-2xl text-[#00303C]">innerHTML:
 
-
+                <br>
                 Gets or sets the HTML markup within an element.
                 
-                
+                <br>   
                 Includes HTML tags, allowing for rich formatting.
                 
-                
+                <br>   
                 Can pose security risks (XSS) if used with unsanitized user input.
                 
-                
+                <br>  
                 It can affect performance, because it can cause the browser to re-render the element.
-                
+                <br>
                 innerText:
                 
-                
+                <br>
                 Gets or sets the visible text content of an element.
                 
-                
+                <br>
                 Considers CSS styling, so hidden elements are ignored.
                 
-                
+                <br>
                 Tries to represent the text as it would appear rendered in the browser.
                 
-                
+                <br>
                 It can be slower than textContent, because it requires layout information.
-                
+                <br>
                 textContent
                 
-                
+                <br>
                 Gets or sets the text content of an element, including hidden elements.
                 
-                
+                <br>
                 Ignores CSS styling.
                 
-                
+                <br>
                 Retrieves all text within an element, regardless of visibility.
                 
-                
+                <br>
                 It is generally faster then innerText.
                 
-                
+                <br>
                 In essence:
                 
-                
+                <br>
                 Use innerHTML when you need to work with HTML markup.
                 
-                
+                <br>
                 Use innerText when you need to work with the visible text.
                 
-                
+                <br>
                 Use textContent when you need to work with all text content.</p>
         </div>
         <!-- Q-3 -->
@@ -114,28 +114,28 @@
             <p class="font-light text-2xl text-[#00303C]">Event delegation in the DOM is a technique where you attach a single event listener to a parent element, rather than adding individual event listeners to each of its child elements. This approach leverages the concept of event bubbling.
 
 
-
+                <br>
                 Event Bubbling:
-                
+                <br>
                 When an event occurs on an element, it "bubbles up" through the DOM tree, triggering event listeners on its parent elements.
-                
+                <br>
                 
                 
                 How Delegation Works:
-                
+                <br>
                 Instead of assigning a listener to every child, you assign one listener to the parent. When an event happens on a child, it bubbles up to the parent. The parent's listener then checks the event.target property to determine which child element originated the event.
                 
-                
+                <br>
                 
                 Benefits:
-                
+                <br>
                 Performance: Reduces the number of event listeners, improving performance, especially with many child elements.
-                
+                <br>
                 
                 
                 Dynamic Elements: Handles events on dynamically added child elements without needing to add new listeners.
                 
-                
+                <br>
                 Simplified Code: Makes event handling code cleaner and more maintainable.</p>
         </div>
         <!-- Q-4 -->
@@ -145,21 +145,21 @@
         <div class="rounded-2xl p-6 bg-white mb-4">
             <p class="font-light text-2xl text-[#00303C]">Event bubbling is a fundamental concept in the Document Object Model (DOM) that describes how events propagate through the hierarchy of elements.
 
-
+                <br>
 
                 The Process:
                 
-                
+                <br>
                 
                 When an event occurs on a specific element (the "target" element), that event doesn't necessarily stop there.   Instead, it "bubbles up" through the DOM tree, meaning it travels upward to the target element's parent, then to its grandparent, and so on, until it reaches the root of the DOM (typically the window object).
                 
-                
+                <br>
                 If any of those ancestor elements have event listeners attached to them for that particular event, those listeners will be triggered.
                 
-                
+                <br>
                 In simpler terms:
                 
-                
+                <br>
                 Imagine dropping a pebble in a pond. The ripples spread outward. Similarly, an event "ripples" upward through the DOM structure.</p>
         </div>
         <!-- Q-5 -->
@@ -169,19 +169,14 @@
         <div class="rounded-2xl p-6 bg-white">
             <p class="font-light text-2xl text-[#00303C]">Creating Elements:
 
-
+                <br>
                 document.createElement(tagName): This method creates a new HTML element with the specified tagName (e.g., "div", "p", "span").
-                
+                <br>
                 Adding Elements:
                 
-                
+                <br>
                 parentNode.appendChild(childNode): Appends a childNode as the last child of a parentNode. parentNode.insertBefore(newNode, referenceNode): Inserts a newNode before a referenceNode within a parentNode. parentNode.append(childNode1, childNode2, ...): Appends one or more Node or string objects to the last child of the parent. parentNode.prepend(childNode1, childNode2, ...): Prepends one or more Node or string objects to the first child of the parent.
-                
-                
-                Removing Elements:
-                
-                
-                parentNode.removeChild(childNode): Removes a childNode from its parentNode. childNode.remove(): Removes the childNode from the DOM. This is a more modern and generally preferred method. Key Considerations: When removing an element with removeChild(), you need a reference to the parent node. With remove(), you can call the method directly on the element you want to remove. These methods allow for dynamic updates to web pages, enabling interactive and responsive user experiences. It is also possible to add and remove content by manipulating the 'innerHTML' property of an element. This method however, is generally less performant, and can create security issues if not properly sanitized.</p>
+                </p>
         </div>
     </section>
  </main>
