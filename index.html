@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>assignment-5</title>
+    <title>A5 Dev Board</title>
     <!-- Google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,16 +24,16 @@
         <!-- navbar -->
         <nav class="flex justify-between rounded-2xl p-6 bg-white">
             <div class="flex gap-2 my-auto">
-                <img src="assets/logo.png" alt="" class="h-12 w-12">
+                <img src="assets/logo.png" alt="" class="h-14 w-12">
                 <h1 class="content-center font-light text-3xl">Dev<span class="font-bold">Board</span></h1> 
             </div>
             <div class="flex gap-7 my-auto">
-                <div class="flex p-3 bg-[#F4F7FF] rounded-full w-32 h-16">
+                <div class="my-auto flex p-3 bg-[#F4F7FF] rounded-full w-32 h-12">
                     <img src="assets/checkbox.png" alt="" class="h-7 w-7 my-auto mx-auto">
-                    <p class="content-center font-bold text-2xl mx-auto">23</p>
+                    <p id="nav-Num" class="content-center font-bold text-2xl mx-auto">23</p>
                 </div>
                 <div class="my-auto p-3 bg-[#F4F7FF] rounded-full">
-                    <img src="assets/theme-btn.png" alt="" class="h-8 w-8">
+                    <img src="assets/theme-btn.png" alt="" class="h-8 w-8" id="theme-btn">
                 </div>
             </div>
         </nav>
@@ -42,81 +42,152 @@
     <!-- main -->
     <main class="container mx-auto">
         <section class="flex gap-6">
-            <div class="gap-2 grid grid-cols-6 w-6/8 bg-white p-6 rounded-2xl">
-                <!-- grid-1 -->
-                <div class="col-span-1 bg-[#F4F7FF] rounded-xl flex">
-                    <div>
+            <div class="gap-6 grid grid-cols-6 w-6/8 bg-white p-6 rounded-2xl">
+                <div class="col-span-6 grid grid-flow-col gap-4">
+                    <!-- grid-1 -->
+                <div class="col-span-1 bg-[#F4F7FF] rounded-xl flex p-6 gap-4">
+                    <div class="p-4 bg-white rounded-full w-14 h-14">
                         <img src="assets/checkbox.png" alt="">
                     </div>
                     <div>
-                        <p>Task Assigned</p>
-                        <p>05</p>
+                        <p class="text-base font-medium text-[#00303C]">Task Assigned</p>
+                        <p class="text-3xl font-bold text-[#00303C]"><span id="task-Num">06</span></p>
                     </div>
                 </div>
                 <!-- grid-2 -->
-                <div class="col-span-4 bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] rounded-xl flex">
+                <div id="box-btn" class="col-span-2 bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] rounded-xl flex p-6 gap-4">
                     <div>
                         <img src="assets/board.png" alt="">
                     </div>
-                    <div class="text-white">
+                    <div class="content-center text-white font-normal text-xl">
                         <p>Discover Something<br>New Today!</p>
                     </div>   
                 </div>
                 <!-- grid-3 -->
-                <div class="col-span-1 bg-[#F4F7FF] rounded-xl flex">
-                    <div>
+                <div class="col-span-1 bg-[#F4F7FF] rounded-xl flex p-6 gap-4">
+                    <div class="p-4 bg-white rounded-full w-14 h-14">
                         <img src="assets/calender.png" alt="">
                     </div>
-                    <div>
-                        <p>Wed ,<br><span class="font-bold">Jul 28 2025</span> </p>
+                    <div id="date" class="text-xl font-normal text-[#00303C]">
+                        <p id="week">Wed</p>
+                        <p class="font-bold"><span id="dd">28 </span><span id="mm">Jul </span><span id="yyyy">2025</span></p>
                     </div>
                 </div>
+                </div>
+                <div class="border-b-2 border-dashed border-[#cbd0ee] col-span-6 -mx-6 my-2"></div>
                 <!-- grid-4 -->
-                <div class="col-span-2 bg-[#F4F7FF] rounded-2xl">
+                <div class="relative col-span-2 bg-[#F4F7FF] rounded-2xl p-6">
                     <div>
-                        <p>ShopEase</p>
-                        <h2>Fix Mobile Button Issue </h2>
-                        <p>Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
-                            and ensure onClick works properly</p>
+                        <p class="bg-white rounded-lg w-fit h-fit px-4 py-2 mb-4">ShopEase</p>
+                        <h2 class="text-xl font-medium mb-4">Fix Mobile Button Issue</h2>
+                        <p class="bg-white rounded-lg h-20 p-4 text-sm text-gray-500 overflow-hidden">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly and ensure onClick works properly</p>
                     </div>
+                    <div class="border-b-2 border-dashed border-[#cbd0ee] my-3"></div>
                     <div class="flex">
                         <div>
-                            <p>Deadline</p>
-                            <p>21 March 2025</p>
+                            <p class="text-sm text-[#00303C]">Deadline</p>
+                            <p class="text-base font-medium text-[#00303C]">21 March 2025</p>
                         </div>
-                        <button>Completed</button>
+                        <button id="com-btn-1" class="btn btn-primary absolute bottom-6 right-6 rounded-lg">Completed</button>
                     </div>
                 </div>
                 <!-- grid-5 -->
-                <div class="col-span-2 bg-[#F4F7FF] rounded-2xl">
-    v
+                <div class="relative col-span-2 bg-[#F4F7FF] rounded-2xl p-6">
+                    <div>
+                        <p class="bg-white rounded-lg w-fit h-fit px-4 py-2 mb-4">CloudSync</p>
+                        <h2 class="text-xl font-medium mb-4">Add Dark Mode</h2>
+                        <p class="bg-white rounded-lg h-20 p-4 text-sm text-gray-500 overflow-hidden">Store the user's preference in localStorage, update CSS variables dynamically, and apply a smooth transition effect.</p>
+                    </div>
+                    <div class="border-b-2 border-dashed border-[#cbd0ee] my-3"></div>
+                    <div class="flex">
+                        <div>
+                            <p class="text-sm text-[#00303C]">Deadline</p>
+                            <p class="text-base font-medium text-[#00303C]">21 March 2025</p>
+                        </div>
+                        <button class="btn btn-primary absolute bottom-6 right-6 rounded-lg">Completed</button>
+                    </div>
                 </div>
                 <!-- grid-6 -->
-                <div class="col-span-2 bg-[#F4F7FF] rounded-2xl">
-    v
+                <div class="relative col-span-2 bg-[#F4F7FF] rounded-2xl p-6">
+                    <div>
+                        <p class="bg-white rounded-lg w-fit h-fit px-4 py-2 mb-4">SwiftPay</p>
+                        <h2 class="text-xl font-medium mb-4">Optimize Home page</h2>
+                        <p class="bg-white rounded-lg h-20 p-4 text-sm text-gray-500 overflow-hidden">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly and ensure onClick works properly</p>
+                    </div>
+                    <div class="border-b-2 border-dashed border-[#cbd0ee] my-3"></div>
+                    <div class="flex">
+                        <div>
+                            <p class="text-sm text-[#00303C]">Deadline</p>
+                            <p class="text-base font-medium text-[#00303C]">21 March 2025</p>
+                        </div>
+                        <button class="btn btn-primary absolute bottom-6 right-6 rounded-lg">Completed</button>
+                    </div>
                 </div>
                 <!-- grid-7 -->
-                <div class="col-span-2 bg-[#F4F7FF] rounded-2xl">
-    v
+                <div class="relative col-span-2 bg-[#F4F7FF] rounded-2xl p-6">
+                    <div>
+                        <p class="bg-white rounded-lg w-fit h-fit px-4 py-2 mb-4">Meta</p>
+                        <h2 class="text-xl font-medium mb-4">Add new emoji 🤲</h2>
+                        <p class="bg-white rounded-lg h-20 p-4 text-sm text-gray-500 overflow-hidden">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly and ensure onClick works properly</p>
+                    </div>
+                    <div class="border-b-2 border-dashed border-[#cbd0ee] my-3"></div>
+                    <div class="flex">
+                        <div>
+                            <p class="text-sm text-[#00303C]">Deadline</p>
+                            <p class="text-base font-medium text-[#00303C]">21 March 2025</p>
+                        </div>
+                        <button class="btn btn-primary absolute bottom-6 right-6 rounded-lg">Completed</button>
+                    </div>
                 </div>
                 <!-- grid-8 -->
-                <div class="col-span-2 bg-[#F4F7FF] rounded-2xl">
-    v
+                <div class="relative col-span-2 bg-[#F4F7FF] rounded-2xl p-6">
+                    <div>
+                        <p class="bg-white rounded-lg w-fit h-fit px-4 py-2 mb-4">Google LLC</p>
+                        <h2 class="text-xl font-medium mb-4">Integrate OpenAI API</h2>
+                        <p class="bg-white rounded-lg h-20 p-4 text-sm text-gray-500 overflow-hidden">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly and ensure onClick works properly</p>
+                    </div>
+                    <div class="border-b-2 border-dashed border-[#cbd0ee] my-3"></div>
+                    <div class="flex">
+                        <div>
+                            <p class="text-sm text-[#00303C]">Deadline</p>
+                            <p class="text-base font-medium text-[#00303C]">21 March 2025</p>
+                        </div>
+                        <button class="btn btn-primary absolute bottom-6 right-6 rounded-lg">Completed</button>
+                    </div>
                 </div>
                 <!-- grid-9 -->
-                <div class="col-span-2 bg-[#F4F7FF] rounded-2xl">
-    v
+                <div class="relative col-span-2 bg-[#F4F7FF] rounded-2xl p-6">
+                    <div>
+                        <p class="bg-white rounded-lg w-fit h-fit px-4 py-2 mb-4">Glassdoar</p>
+                        <h2 class="text-xl font-medium mb-4">Improve Job searching </h2>
+                        <p class="bg-white rounded-lg h-20 p-4 text-sm text-gray-500 overflow-hidden">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly and ensure onClick works properly</p>
+                    </div>
+                    <div class="border-b-2 border-dashed border-[#cbd0ee] my-3"></div>
+                    <div class="flex">
+                        <div>
+                            <p class="text-sm text-[#00303C]">Deadline</p>
+                            <p class="text-base font-medium text-[#00303C]">21 March 2025</p>
+                        </div>
+                        <button class="btn btn-primary absolute bottom-6 right-6 rounded-lg">Completed</button>
+                    </div>
                 </div>
             </div>
             <!-- grid-10 -->
-            <div class="w-2/8 bg-white rounded-2xl">
-                <div class="flex">
+            <div class="w-2/8 bg-white rounded-2xl p-6">
+                <div class="flex gap-4 justify-center">
                     <img src="assets/activity.png" alt="">
                     <p>Activity Log</p>
                 </div>
-                <button>Clear History</button>
+                <div class="text-center my-4">
+                    <button class="btn btn-primary rounded-lg">Clear History</button>
+                </div>
+                <div class="border-b-2 border-dashed border-[#cbd0ee] -mx-6"></div>
             </div>
         </section>
     </main>
+    <br>
+    <script src="utilities/utilities.js"></script>
+    <script src="js/completed.js"></script>
+    <script src="js/background-animation.js"></script>
 </body>
 </html>
